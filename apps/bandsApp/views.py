@@ -22,14 +22,14 @@ def index (request) :
     print session_key
 
     # Find if the session key exists in orders db 
-    order = Order.objects.get(session_id=session_key)
-    print order
-
-    if (order) :
+    try :
+        order = Order.objects.get(session_id=session_key)
         request.session['order_id'] = order.id
         bands = order.bands.all()
         numCartItems = len(bands)
         print numCartItems
+    except Order.DoesNotExist :
+        numCartItems = 0
     
     # Get artists featured items
     artistFeaturedBands = Band.objects.filter(vendor__vendorType='artist', isFeatured='True')
@@ -80,6 +80,7 @@ def showCart (request, orderId) :
     totalPrice = 0
     for band in bands :
         totalPrice += band.price
+    context = {'bands':bands, 'totalPrice':totalPrice}
     return render(request, 'bandsApp/shoppingCart.html', context)
 
 # Edit shopping cart. some problem here. i need to fix it 
