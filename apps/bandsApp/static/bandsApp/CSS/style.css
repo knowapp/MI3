@@ -1,0 +1,25 @@
+.page-header{
+    width:100%;
+    text-align:center;
+    margin-top: -170px;
+    margin-bottom: -150px;
+}
+
+.page-header img{
+    display:inline-block;
+    width: 50%;
+    height: auto;
+}
+
+#myCarousel{
+  
+    margin-top: -20px;
+}
+#navbar{
+
+    background-color: #233237;
+}
+.jumbotron{
+    background-color: #233237;
+    color: #EAC67A;
+}
