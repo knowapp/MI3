@@ -89,5 +89,13 @@ def editCart (request, orderId) :
     # Edit the order table entry and redirect to showCart 
     return redirect(reverse('bands:cart'))
 
+def vendorDetails(request, vendorId) :
+    print "in vendor detials"
+    # Get the vendor 
+    vendor = Vendor.objects.get(pk=vendorId) # pk = primary key. You can put id instead of pk
+    # Get all bands by this vendor
+    bands = Band.objects.filter(vendor=vendor)
 
+    context = {'vendor':vendor, 'bands':bands} 
+    return render(request, 'bandsApp/vendorDetails.html', context)
 
