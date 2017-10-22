@@ -1,25 +1,52 @@
+#wrapper{
+    height: 100%;
+background-color: white;
+}
 .page-header{
     width:100%;
     text-align:center;
     margin-top: -170px;
     margin-bottom: -150px;
 }
-
 .page-header img{
     display:inline-block;
     width: 50%;
     height: auto;
 }
-
 #myCarousel{
-  
-    margin-top: -20px;
+margin-top: -20px;
 }
 #navbar{
-
-    background-color: #233237;
+background-color: #233237;
 }
 .jumbotron{
     background-color: #233237;
     color: #EAC67A;
+}
+.carousel-inner > .item > img {
+    margin: 0 auto;
+}
+
+.vendor_left {
+    background-color: green;
+    height: 400px;
+    width: 300px;
+    display: inline-block;
+}
+.vendor_left img{
+    display:inline-block;
+    width: 50%;
+    height: auto;
+}
+.vendor_right {
+    background-color: yellow;
+    height: 400px;
+    width: 600px;
+    display: inline-block;
+}
+.vendor_bottom {
+    background-color: orange;
+    height: 200px;
+    width: 100%;
+    display: inline-block;
 }

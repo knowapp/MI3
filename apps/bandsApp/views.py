@@ -90,7 +90,7 @@ def editCart (request, orderId) :
     return redirect(reverse('bands:cart'))
 
 def vendorDetails(request, vendorId) :
-    print "in vendor detials"
+    print "in vendorDetails"
     # Get the vendor 
     vendor = Vendor.objects.get(pk=vendorId) # pk = primary key. You can put id instead of pk
     # Get all bands by this vendor
